@@ -1,0 +1,34 @@
+{
+    "configs": [
+        {
+            "name": "example_model",
+            "run_this": true,
+            "rewards_move": -0.025,
+            "rewards_obstacle": -2,
+            "rewards_target_found": 2,
+            "rewards_backtrack": -1,
+            "discount": 0.99,
+            "min_learning_rate": 0.0004,
+            "learning_rate": 0.0015,
+            "learning_rate_decay": 0.99,
+            "min_epsilon": 0.005,
+            "epsilon": 1,
+            "epsilon_decay": 0.994,
+            "total_memory": 50000,
+            "min_memory_size": 20000,
+            "batch_size": 128,
+            "target_model_replace_at": 5,
+            "target_model_replace_counter": 0,
+            "model_generation": 0,
+            "training_started": false,
+            "hidden_layers": "512, 512",
+            "loss_function": "mse",
+            "aggregate_mean_over": 500,
+            "run_steps": 250000,
+            "agent_path_length": 20,
+            "max_targets": 7,
+            "state_grid_width": 6,
+            "env_handicap": 0.3
+        }
+    ]
+}
