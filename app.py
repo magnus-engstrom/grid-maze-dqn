@@ -45,7 +45,7 @@ class ModelRunner:
         # a initial state value used for setting up the network (input shape)
         old_state = self.env.get_total_state(self.agent.position, self.agent.age_value())
 
-        rewards = [config["rewards_move"], config["rewards_obstacle"], config["rewards_backtrack"], config["rewards_target_found"]]
+        rewards = [self.config["rewards_move"], self.config["rewards_obstacle"], self.config["rewards_backtrack"], self.config["rewards_target_found"]]
         reward_range = max(rewards)-min(rewards)
         self.model = Model((1, len(old_state)), len(self.agent.action_space), self.config, reward_range)
         iterations = 0 
